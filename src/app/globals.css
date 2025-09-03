@@ -1,26 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Carattere&family=Work+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Custom colors */
+  --color-purple: #800080;
+  --color-tiffany: #33bbc5;
+  --color-paleblue: #c1eaed;
+  --color-red: #e50000;
+  --color-lightred: #fcecec;
+  --color-main: #cccccc;
+  --color-lightgray: #e0e0e0;
+  --color-whiskeycolor: #f5f5f5;
+  --color-lightblack: #999999;
+  --color-mixpinkblue: #e1d8e9;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Fonts */
+  --font-camp: "Carattere", cursive;
+  --font-work: "Work Sans", sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Background gradients */
+  --background-gradient-paleblue: linear-gradient(
+    to bottom right,
+    #c1eaed,
+    #5bbfd9
+  );
+  --background-gradient-lightred: linear-gradient(
+    to bottom right,
+    #fcecec,
+    #f28b82
+  );
+
+  /* Custom heights */
+  --height-navbar: 78px;
+  --height-content: calc(100vh - 78px);
+  --height-autoh: auto;
+
+  /* Animations */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
+  --animate-slide: slide 25s linear infinite;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  /* Container max widths */
+  --max-sm: 575px;
+  --max-md: 767px;
+  --max-lg: 950px;
+  --max-xl: 1100px;
+  --max-3xl: 1200px;
+  --max-4xl: 1450px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-work);
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 576px) {
+  .container {
+    max-width: var(--max-sm);
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--max-md);
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: var(--max-lg);
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--max-xl);
+  }
+}
+@media (min-width: 1420px) {
+  .container {
+    max-width: var(--max-3xl);
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: var(--max-4xl);
+  }
 }

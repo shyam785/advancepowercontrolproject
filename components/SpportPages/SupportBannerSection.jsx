@@ -4,7 +4,7 @@ import { MapPin, Mail, Phone } from "lucide-react";
 
 const SupportBannerSection = () => {
   return (
-    <section className="relative bg-gradient-to-r from-blue-50 to-white py-16 px-6 lg:px-20 font-work">
+    <section className="relative bg-gradient-to-r from-gray-200 to-white py-16 px-6 lg:px-20 font-work">
       <div className="container">
         <div className="max-w-5xl mx-auto text-center">
           {/* Heading */}

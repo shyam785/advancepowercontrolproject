@@ -41,6 +41,7 @@ const NavBar = () => {
 
         <ul className="hidden lg:flex items-center gap-6 text-base font-semibold whitespace-nowrap">
           {[
+            { href: "/product", label: "Product" },
             { href: "/our-story", label: "Our Story" },
             { href: "/support", label: "Connect" },
           ].map((item) => (
@@ -48,12 +49,12 @@ const NavBar = () => {
               <Link
                 href={item.href}
                 className={`group relative inline-block font-extrabold text-lg transition duration-150 ease-in-out ${
-                  isActive(item.href) ? "text-red" : "text-black"
+                  isActive(item.href) ? "text-purple" : "text-black"
                 }`}
               >
                 <span>{item.label}</span>
                 <span
-                  className={`absolute left-0 -bottom-1 w-full h-0.5 bg-red transition-transform duration-300 origin-left
+                  className={`absolute left-0 -bottom-1 w-full h-0.5 bg-purple transition-transform duration-300 origin-left
           ${
             isActive(item.href)
               ? "scale-x-100"
@@ -122,6 +123,7 @@ const NavBar = () => {
           {/* Other Nav Links */}
           <div className="text-center flex flex-col items-center">
             {[
+              { href: "/product", label: "Product" },
               { href: "/ourstory", label: "Our Story" },
               { href: "/connect", label: "Connect" },
             ].map((item, index, array) => (

@@ -1,6 +1,4 @@
-"use client";
-
-import MainHome from "../../components/HomePages/MainHome";
+import MainHome from "@/components/HomePages/MainHome";
 
 export default function Home() {
   return (

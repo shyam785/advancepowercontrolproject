@@ -4,23 +4,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* Custom colors */
   --color-purple: #800080;
-  --color-tiffany: #33bbc5;
-  --color-paleblue: #c1eaed;
-  --color-red: #e50000;
-  --color-lightred: #fcecec;
-  --color-main: #cccccc;
-  --color-lightgray: #e0e0e0;
-  --color-whiskeycolor: #f5f5f5;
-  --color-lightblack: #999999;
-  --color-mixpinkblue: #e1d8e9;
+  --color-DarkBlue: #0a2342;
+  --color-BrightOrange: #ff6b00;
+  --color-LightGray: #f5f7fa;
+  --color-CharcoalBlack: #1c1c1c;
 
-  /* Fonts */
   --font-camp: "Carattere", cursive;
   --font-work: "Work Sans", sans-serif;
 
-  /* Background gradients */
   --background-gradient-paleblue: linear-gradient(
     to bottom right,
     #c1eaed,
@@ -32,12 +24,10 @@
     #f28b82
   );
 
-  /* Custom heights */
   --height-navbar: 78px;
   --height-content: calc(100vh - 78px);
   --height-autoh: auto;
 
-  /* Animations */
   @keyframes slide {
     0% {
       transform: translateX(0);
@@ -54,7 +44,6 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  /* Container max widths */
   --max-sm: 575px;
   --max-md: 767px;
   --max-lg: 950px;
@@ -82,9 +71,15 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+  max-width: 100%; /* fluid by default */
 }
 
-/* Responsive breakpoints */
+/* .container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+} */
+
 @media (min-width: 576px) {
   .container {
     max-width: var(--max-sm);
